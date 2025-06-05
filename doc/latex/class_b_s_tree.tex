@@ -1,0 +1,173 @@
+\hypertarget{class_b_s_tree}{}\doxysection{BSTree Class Reference}
+\label{class_b_s_tree}\index{BSTree@{BSTree}}
+
+
+Binary Search Tree implementation for \mbox{\hyperlink{class_flight}{Flight}} objects.  
+
+
+
+
+{\ttfamily \#include $<$bstree.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_s_tree_a17f9ec9f01f9384d1042884bf9c42539}{Insert}} (\mbox{\hyperlink{class_flight}{Flight}} key)
+\begin{DoxyCompactList}\small\item\em Inserts a flight into the tree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_b_s_tree_ab7048121cc104fcba859040ab4d029b9}{Search}} (\mbox{\hyperlink{class_flight}{Flight}} key, std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Searches for flights matching criteria. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_tree_a453f06c8a102516d7306d53c62b6b9bc}{BSTree}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_tree_a2861dba09af11dc0e06dc8ee1e50a3be}{BSTree}} (\mbox{\hyperlink{struct_tree_node}{Tree\+Node}} $\ast$root\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor with root initialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_tree_a61dd6f59635ca4b40ab97c6a0f939bca}{$\sim$\+BSTree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor -\/ cleans up all nodes. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_tree_node}{Tree\+Node}} $\ast$ \mbox{\hyperlink{class_b_s_tree_a321b29e7771c4a68fabdb3bd1b35f260}{Get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Gets root node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_tree_adf90fb2417d64eba0d16cf1a65e04cd5}{Set\+Root}} (\mbox{\hyperlink{struct_tree_node}{Tree\+Node}} $\ast$root\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets new root node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Binary Search Tree implementation for \mbox{\hyperlink{class_flight}{Flight}} objects. 
+
+Definition at line \mbox{\hyperlink{bstree_8h_source_l00028}{28}} of file \mbox{\hyperlink{bstree_8h_source}{bstree.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_s_tree_a453f06c8a102516d7306d53c62b6b9bc}\label{class_b_s_tree_a453f06c8a102516d7306d53c62b6b9bc}} 
+\index{BSTree@{BSTree}!BSTree@{BSTree}}
+\index{BSTree@{BSTree}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{BSTree()}{BSTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily BSTree\+::\+BSTree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_s_tree_a2861dba09af11dc0e06dc8ee1e50a3be}\label{class_b_s_tree_a2861dba09af11dc0e06dc8ee1e50a3be}} 
+\index{BSTree@{BSTree}!BSTree@{BSTree}}
+\index{BSTree@{BSTree}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{BSTree()}{BSTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily BSTree\+::\+BSTree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tree_node}{Tree\+Node}} $\ast$}]{root\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor with root initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+} & Node to set as initial root \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_s_tree_a61dd6f59635ca4b40ab97c6a0f939bca}\label{class_b_s_tree_a61dd6f59635ca4b40ab97c6a0f939bca}} 
+\index{BSTree@{BSTree}!````~BSTree@{$\sim$BSTree}}
+\index{````~BSTree@{$\sim$BSTree}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{$\sim$BSTree()}{~BSTree()}}
+{\footnotesize\ttfamily BSTree\+::$\sim$\+BSTree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor -\/ cleans up all nodes. 
+
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_tree_a321b29e7771c4a68fabdb3bd1b35f260}\label{class_b_s_tree_a321b29e7771c4a68fabdb3bd1b35f260}} 
+\index{BSTree@{BSTree}!GetRoot@{GetRoot}}
+\index{GetRoot@{GetRoot}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{GetRoot()}{GetRoot()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_tree_node}{Tree\+Node}} $\ast$ BSTree\+::\+Get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets root node. 
+
+\begin{DoxyReturn}{Returns}
+const Tree\+Node$\ast$ Read-\/only pointer to root 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_s_tree_a17f9ec9f01f9384d1042884bf9c42539}\label{class_b_s_tree_a17f9ec9f01f9384d1042884bf9c42539}} 
+\index{BSTree@{BSTree}!Insert@{Insert}}
+\index{Insert@{Insert}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily void BSTree\+::\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Inserts a flight into the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{class_flight}{Flight}} object to insert \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_s_tree_ab7048121cc104fcba859040ab4d029b9}\label{class_b_s_tree_ab7048121cc104fcba859040ab4d029b9}} 
+\index{BSTree@{BSTree}!Search@{Search}}
+\index{Search@{Search}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily int BSTree\+::\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}}}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Searches for flights matching criteria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{class_flight}{Flight}} object with search criteria \\
+\hline
+{\em result} & Vector to store matching flights \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of matches found 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_s_tree_adf90fb2417d64eba0d16cf1a65e04cd5}\label{class_b_s_tree_adf90fb2417d64eba0d16cf1a65e04cd5}} 
+\index{BSTree@{BSTree}!SetRoot@{SetRoot}}
+\index{SetRoot@{SetRoot}!BSTree@{BSTree}}
+\doxysubsubsection{\texorpdfstring{SetRoot()}{SetRoot()}}
+{\footnotesize\ttfamily void BSTree\+::\+Set\+Root (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tree_node}{Tree\+Node}} $\ast$}]{root\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets new root node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+} & Pointer to new root node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bstree_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{bstree_8cpp_source}{bstree.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{bstree_8h}{bstree.\+h}}\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{bstree_8cpp}{bstree.\+cpp}}\end{DoxyCompactItemize}

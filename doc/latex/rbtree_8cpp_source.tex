@@ -1,0 +1,191 @@
+\hypertarget{rbtree_8cpp_source}{}\doxysection{rbtree.\+cpp}
+\label{rbtree_8cpp_source}\index{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/rbtree.cpp@{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/rbtree.cpp}}
+\mbox{\hyperlink{rbtree_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rbtree_8h}{rbtree.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00002}\mbox{\hyperlink{struct_r_b_tree_node_a0cdf882582e4b5732fa27dfb7be71902}{00002}} \mbox{\hyperlink{struct_r_b_tree_node_a0cdf882582e4b5732fa27dfb7be71902}{RBTreeNode::RBTreeNode}}(\mbox{\hyperlink{class_flight}{Flight}} key\_) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00003}00003     \mbox{\hyperlink{struct_r_b_tree_node_abcfabfecba0282ef2123f260e671f390}{key}} = key\_;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00004}00004     \mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00005}00005     \mbox{\hyperlink{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}{flights}}.push\_back(key\_);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00006}00006 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00008}\mbox{\hyperlink{class_r_b_tree_a9a44f14311a9ee38c73d7441fd0d8667}{00008}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_r_b_tree_a9a44f14311a9ee38c73d7441fd0d8667}{RBTree::SetRoot}}(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* root\_) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00009}00009     root = root\_;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00011}\mbox{\hyperlink{class_r_b_tree_a3df5cba798764c4111eb4b77649e005e}{00011}} \textcolor{keyword}{const} \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* \mbox{\hyperlink{class_r_b_tree_a3df5cba798764c4111eb4b77649e005e}{RBTree::GetRoot}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} root;\}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00013}00013 \textcolor{keywordtype}{void} RBTree::rotateLeft(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}*\& node) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00014}00014     \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* rightChild = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00015}00015     \textcolor{keywordflow}{if}(rightChild) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00016}00016         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* grandparent = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00017}00017         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* grandson = rightChild-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00020}00020     node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}} = grandson;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00021}00021     \textcolor{keywordflow}{if} (grandson)}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00022}00022         grandson-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00025}00025     rightChild-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}} = node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00026}00026     rightChild-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = grandparent;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00029}00029     \textcolor{keywordflow}{if} (!grandparent) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00030}00030         root = rightChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00031}00031     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (node == grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00032}00032         grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}} = rightChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00033}00033     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00034}00034         grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}} = rightChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00037}00037     node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = rightChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00039}00039     node = rightChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00041}00041         }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00045}00045 \textcolor{keywordtype}{void} RBTree::rotateRight(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}*\& node) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00046}00046     \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* leftChild = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00047}00047     \textcolor{keywordflow}{if}(leftChild) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00048}00048         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* grandparent = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00049}00049         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* grandson = leftChild-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00052}00052     node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}} = grandson;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00053}00053     \textcolor{keywordflow}{if} (grandson)}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00054}00054         grandson-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00057}00057     leftChild-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}} = node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00058}00058     leftChild-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = grandparent;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00061}00061     \textcolor{keywordflow}{if} (!grandparent) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00062}00062         root = leftChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00063}00063     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (node == grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00064}00064         grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}} = leftChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00065}00065     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00066}00066         grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}} = leftChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00069}00069     node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = leftChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00071}00071     node = leftChild;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00073}00073         }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00078}00078 \textcolor{keywordtype}{void} RBTree::Balance(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}*\& node) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00079}00079     \textcolor{keywordflow}{while} (node != root \&\& node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} \&\& node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}}-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} == \mbox{\hyperlink{rbtree_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}} \&\& node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}}-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00080}00080         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* parent = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00081}00081         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* grandparent = parent-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00084}00084         \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* uncle = (parent == grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}) ? grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}} : grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00086}00086         if (uncle \&\& uncle-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} == \mbox{\hyperlink{rbtree_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00087}00087             \textcolor{comment}{// Case 1: Uncle is RED — recolor}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00088}00088             parent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00089}00089             uncle-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00090}00090             grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00091}00091             node = grandparent;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00092}00092         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00093}00093             \textcolor{keywordflow}{if} (parent == grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00094}00094                 \textcolor{keywordflow}{if} (node == parent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00095}00095                     \textcolor{comment}{// Case 2: Left-\/Right — rotate left on parent}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00096}00096                     rotateLeft(parent);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00097}00097                     node = parent;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00098}00098                     parent = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00099}00099                 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00100}00100                 \textcolor{comment}{// Case 3: Left-\/Left — rotate right on grandparent}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00101}00101                 parent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00102}00102                 grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00103}00103                 rotateRight(grandparent);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00104}00104             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00105}00105                 \textcolor{keywordflow}{if} (node == parent-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00106}00106                     \textcolor{comment}{// Case 2 mirror: Right-\/Left}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00107}00107                     rotateRight(parent);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00108}00108                     node = parent;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00109}00109                     parent = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00110}00110                 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00111}00111                 \textcolor{comment}{// Case 3 mirror: Right-\/Right}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00112}00112                 parent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00113}00113                 grandparent-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00114}00114                 rotateLeft(grandparent);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00115}00115             \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00116}00116         \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00117}00117     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00118}00118     root-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00119}00119 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00122}00122 \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* RBTree::Insert(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}*\& node, \mbox{\hyperlink{class_flight}{Flight}} key, \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* parent) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00123}00123     \textcolor{keywordflow}{if} (node == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00124}00124         node = \textcolor{keyword}{new} \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}(key);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00125}00125         node-\/>\mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}} = parent;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00126}00126         \textcolor{keywordflow}{return} node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00128}00128     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (key < node-\/>key) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00129}00129         \textcolor{keywordflow}{return} Insert(node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}, key, node);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00130}00130     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00131}00131     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (key > node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfabfecba0282ef2123f260e671f390}{key}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00132}00132         \textcolor{keywordflow}{return} Insert(node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}}, key, node);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00133}00133     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00134}00134         node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}{flights}}.push\_back(key);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00135}00135         \textcolor{keywordflow}{return} node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00136}00136     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00137}00137 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00139}\mbox{\hyperlink{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}{00139}} \mbox{\hyperlink{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}{RBTree::RBTree}}() \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00140}00140     root = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00141}00141 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00143}\mbox{\hyperlink{class_r_b_tree_ae92465ed083a086b23d896fe3574e1f0}{00143}} \mbox{\hyperlink{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}{RBTree::RBTree}}(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* root\_) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00144}00144     root = root\_;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00145}00145     root-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}} = \mbox{\hyperlink{rbtree_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00146}00146 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00148}00148 \textcolor{keywordtype}{int} RBTree::Search(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* node, \mbox{\hyperlink{class_flight}{Flight}} key, std::vector<Flight>\& v) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00149}00149     \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00150}00150     \textcolor{keywordflow}{if} (node != \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00151}00151         \textcolor{keywordflow}{if} (key < node-\/>key) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00152}00152             count = Search(node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}, key, v);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00153}00153         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (key > node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abcfabfecba0282ef2123f260e671f390}{key}}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00154}00154             count = Search(node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}}, key, v);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00155}00155         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00156}00156             v.insert(v.end(), node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}{flights}}.begin(), node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}{flights}}.end());}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00157}00157             count = node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}{flights}}.size();}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00158}00158         \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00159}00159     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00160}00160     \textcolor{keywordflow}{return} count;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00161}00161 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00163}00163 \textcolor{keywordtype}{void}  RBTree::DeleteTree(\mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}} *\& node) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00164}00164     \textcolor{keywordflow}{if} (node != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00166}00166         DeleteTree(node-\/>\mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}});}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00167}00167         DeleteTree(node-\/>\mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}});}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00169}00169         \textcolor{keyword}{delete} node;}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00170}00170         node = \textcolor{keyword}{nullptr}; }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00171}00171     \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00172}00172 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00174}\mbox{\hyperlink{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}{00174}} \mbox{\hyperlink{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}{RBTree::\string~RBTree}}() \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00175}00175     this-\/>DeleteTree(root);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00176}00176 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00178}\mbox{\hyperlink{class_r_b_tree_a50b847741d9d7f4336255bfbde8d5d52}{00178}} \textcolor{keywordtype}{void} RBTree::Insert(\mbox{\hyperlink{class_flight}{Flight}} key) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00179}00179     \mbox{\hyperlink{struct_r_b_tree_node}{RBTreeNode}}* inserted = this-\/>Insert(root, key, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00180}00180     Balance(inserted);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00181}00181 \}}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00183}\mbox{\hyperlink{class_r_b_tree_a62355b6e09276bd14418feff0d20cfa3}{00183}} \textcolor{keywordtype}{int} RBTree::Search(\mbox{\hyperlink{class_flight}{Flight}} key, std::vector<Flight>\& result) \{}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00184}00184     \textcolor{keywordflow}{return} this-\/>Search(root, key, result);}
+\DoxyCodeLine{\Hypertarget{rbtree_8cpp_source_l00185}00185 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,185 @@
+\hypertarget{search_8h}{}\doxysection{/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/search.h File Reference}
+\label{search_8h}\index{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/search.h@{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/search.h}}
+{\ttfamily \#include \char`\"{}flight.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bstree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rbtree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}hash\+\_\+table.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{search_8h_a8ae9d53f33f46cfcfcb9736e6351452a}{KEY}}~\char`\"{}Ural Airlines\char`\"{}
+\begin{DoxyCompactList}\small\item\em Default search key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{search_8h_a9274942cbcf892243551c48a6bc7989e}{parse\+CSV}} (std\+::string filename, std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Parses CSV file into flight vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search_8h_a09fac3c0e2865e65bbf0a011e92a892c}{linear\+\_\+search}} (const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&flights, std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Linear search implementation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_tree}{BSTree}} $\ast$ \mbox{\hyperlink{search_8h_a7f16eb993f76a001d4d71038ebfc11c4}{binary\+\_\+insert}} (const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&flights)
+\begin{DoxyCompactList}\small\item\em Builds BST from flights. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree}{RBTree}} $\ast$ \mbox{\hyperlink{search_8h_ad47b4972ca1f60b3d06da13c891f5802}{rb\+\_\+insert}} (const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&flights)
+\begin{DoxyCompactList}\small\item\em Builds \mbox{\hyperlink{class_r_b_tree}{RBTree}} from flights. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hash_table}{Hash\+Table}} $\ast$ \mbox{\hyperlink{search_8h_adc07f545f5fc5247fdf19d7eb7c46ff6}{hash\+\_\+table\+\_\+insert}} (const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&flights, int \&collisions)
+\begin{DoxyCompactList}\small\item\em Builds \mbox{\hyperlink{class_hash_table}{Hash\+Table}} from flights. \end{DoxyCompactList}\item 
+std\+::multimap$<$ std\+::string, \mbox{\hyperlink{class_flight}{Flight}} $>$ $\ast$ \mbox{\hyperlink{search_8h_a348c84ffaa90a1d459e4fb060dba5b95}{multimap\+\_\+insert}} (const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&flights)
+\begin{DoxyCompactList}\small\item\em Builds multimap from flights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{search_8h_a8ae9d53f33f46cfcfcb9736e6351452a}\label{search_8h_a8ae9d53f33f46cfcfcb9736e6351452a}} 
+\index{search.h@{search.h}!KEY@{KEY}}
+\index{KEY@{KEY}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{KEY}{KEY}}
+{\footnotesize\ttfamily \#define KEY~\char`\"{}Ural Airlines\char`\"{}}
+
+
+
+Default search key. 
+
+
+
+Definition at line \mbox{\hyperlink{search_8h_source_l00009}{9}} of file \mbox{\hyperlink{search_8h_source}{search.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{search_8h_a7f16eb993f76a001d4d71038ebfc11c4}\label{search_8h_a7f16eb993f76a001d4d71038ebfc11c4}} 
+\index{search.h@{search.h}!binary\_insert@{binary\_insert}}
+\index{binary\_insert@{binary\_insert}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{binary\_insert()}{binary\_insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_tree}{BSTree}} $\ast$ binary\+\_\+insert (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{flights }\end{DoxyParamCaption})}
+
+
+
+Builds BST from flights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flights} & \mbox{\hyperlink{class_flight}{Flight}} vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed BST 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{search_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{search_8cpp_source}{search.\+cpp}}.
+
+\mbox{\Hypertarget{search_8h_adc07f545f5fc5247fdf19d7eb7c46ff6}\label{search_8h_adc07f545f5fc5247fdf19d7eb7c46ff6}} 
+\index{search.h@{search.h}!hash\_table\_insert@{hash\_table\_insert}}
+\index{hash\_table\_insert@{hash\_table\_insert}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_insert()}{hash\_table\_insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hash_table}{Hash\+Table}} $\ast$ hash\+\_\+table\+\_\+insert (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{flights,  }\item[{int \&}]{collisions }\end{DoxyParamCaption})}
+
+
+
+Builds \mbox{\hyperlink{class_hash_table}{Hash\+Table}} from flights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flights} & \mbox{\hyperlink{class_flight}{Flight}} vector \\
+\hline
+{\em collisions} & Output collision count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \mbox{\hyperlink{class_hash_table}{Hash\+Table}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{search_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{search_8cpp_source}{search.\+cpp}}.
+
+\mbox{\Hypertarget{search_8h_a09fac3c0e2865e65bbf0a011e92a892c}\label{search_8h_a09fac3c0e2865e65bbf0a011e92a892c}} 
+\index{search.h@{search.h}!linear\_search@{linear\_search}}
+\index{linear\_search@{linear\_search}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{linear\_search()}{linear\_search()}}
+{\footnotesize\ttfamily int linear\+\_\+search (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{flights,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Linear search implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flights} & \mbox{\hyperlink{class_flight}{Flight}} vector to search \\
+\hline
+{\em result} & Vector for results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of matches 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{search_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{search_8cpp_source}{search.\+cpp}}.
+
+\mbox{\Hypertarget{search_8h_a348c84ffaa90a1d459e4fb060dba5b95}\label{search_8h_a348c84ffaa90a1d459e4fb060dba5b95}} 
+\index{search.h@{search.h}!multimap\_insert@{multimap\_insert}}
+\index{multimap\_insert@{multimap\_insert}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{multimap\_insert()}{multimap\_insert()}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \mbox{\hyperlink{class_flight}{Flight}} $>$ $\ast$ multimap\+\_\+insert (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{flights }\end{DoxyParamCaption})}
+
+
+
+Builds multimap from flights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flights} & \mbox{\hyperlink{class_flight}{Flight}} vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed multimap 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{search_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{search_8cpp_source}{search.\+cpp}}.
+
+\mbox{\Hypertarget{search_8h_a9274942cbcf892243551c48a6bc7989e}\label{search_8h_a9274942cbcf892243551c48a6bc7989e}} 
+\index{search.h@{search.h}!parseCSV@{parseCSV}}
+\index{parseCSV@{parseCSV}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{parseCSV()}{parseCSV()}}
+{\footnotesize\ttfamily int parse\+CSV (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Parses CSV file into flight vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & CSV file path \\
+\hline
+{\em result} & Vector to store flights \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, error code otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{search_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{search_8cpp_source}{search.\+cpp}}.
+
+\mbox{\Hypertarget{search_8h_ad47b4972ca1f60b3d06da13c891f5802}\label{search_8h_ad47b4972ca1f60b3d06da13c891f5802}} 
+\index{search.h@{search.h}!rb\_insert@{rb\_insert}}
+\index{rb\_insert@{rb\_insert}!search.h@{search.h}}
+\doxysubsubsection{\texorpdfstring{rb\_insert()}{rb\_insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_b_tree}{RBTree}} $\ast$ rb\+\_\+insert (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{flights }\end{DoxyParamCaption})}
+
+
+
+Builds \mbox{\hyperlink{class_r_b_tree}{RBTree}} from flights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flights} & \mbox{\hyperlink{class_flight}{Flight}} vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \mbox{\hyperlink{class_r_b_tree}{RBTree}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{search_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{search_8cpp_source}{search.\+cpp}}.
+

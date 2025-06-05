@@ -1,0 +1,29 @@
+\hypertarget{search_8h_source}{}\doxysection{search.\+h}
+\label{search_8h_source}\index{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/search.h@{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/search.h}}
+\mbox{\hyperlink{search_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef SEARCH\_H}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00002}00002 \textcolor{preprocessor}{\#define SEARCH\_H}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00003}00003 \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{flight_8h}{flight.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{bstree_8h}{bstree.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rbtree_8h}{rbtree.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{hash__table_8h}{hash\_table.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00009}\mbox{\hyperlink{search_8h_a8ae9d53f33f46cfcfcb9736e6351452a}{00009}} \textcolor{preprocessor}{\#define KEY "{}Ural Airlines"{}} }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00017}00017 \textcolor{keywordtype}{int} \mbox{\hyperlink{search_8h_a9274942cbcf892243551c48a6bc7989e}{parseCSV}}(std::string filename, std::vector<Flight> \&result);}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00025}00025 \textcolor{keywordtype}{int} \mbox{\hyperlink{search_8h_a09fac3c0e2865e65bbf0a011e92a892c}{linear\_search}}(\textcolor{keyword}{const} std::vector<Flight>\& flights, std::vector<Flight>\& result);}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00032}00032 \mbox{\hyperlink{class_b_s_tree}{BSTree}}* \mbox{\hyperlink{search_8h_a7f16eb993f76a001d4d71038ebfc11c4}{binary\_insert}}(\textcolor{keyword}{const} std::vector<Flight>\& flights);}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00039}00039 \mbox{\hyperlink{class_r_b_tree}{RBTree}}* \mbox{\hyperlink{search_8h_ad47b4972ca1f60b3d06da13c891f5802}{rb\_insert}}(\textcolor{keyword}{const} std::vector<Flight>\& flights);}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00047}00047 \mbox{\hyperlink{class_hash_table}{HashTable}}* \mbox{\hyperlink{search_8h_adc07f545f5fc5247fdf19d7eb7c46ff6}{hash\_table\_insert}}(\textcolor{keyword}{const} std::vector<Flight>\& flights, \textcolor{keywordtype}{int}\& collisions);}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00054}00054 std::multimap<std::string, Flight>* \mbox{\hyperlink{search_8h_a348c84ffaa90a1d459e4fb060dba5b95}{multimap\_insert}}(\textcolor{keyword}{const} std::vector<Flight>\& flights);}
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{search_8h_source_l00056}00056 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,173 @@
+\hypertarget{class_r_b_tree}{}\doxysection{RBTree Class Reference}
+\label{class_r_b_tree}\index{RBTree@{RBTree}}
+
+
+Red-\/\+Black Tree implementation with balancing.  
+
+
+
+
+{\ttfamily \#include $<$rbtree.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_r_b_tree_a50b847741d9d7f4336255bfbde8d5d52}{Insert}} (\mbox{\hyperlink{class_flight}{Flight}} key)
+\begin{DoxyCompactList}\small\item\em Public insert interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_b_tree_a62355b6e09276bd14418feff0d20cfa3}{Search}} (\mbox{\hyperlink{class_flight}{Flight}} key, std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Public search interface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}{RBTree}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree_ae92465ed083a086b23d896fe3574e1f0}{RBTree}} (\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$root\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor with root initialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}{$\sim$\+RBTree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor -\/ cleans up all nodes. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$ \mbox{\hyperlink{class_r_b_tree_a3df5cba798764c4111eb4b77649e005e}{Get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Gets root node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_b_tree_a9a44f14311a9ee38c73d7441fd0d8667}{Set\+Root}} (\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$root\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets new root node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Red-\/\+Black Tree implementation with balancing. 
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00031}{31}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}\label{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}} 
+\index{RBTree@{RBTree}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{RBTree()}{RBTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily RBTree\+::\+RBTree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+\mbox{\Hypertarget{class_r_b_tree_ae92465ed083a086b23d896fe3574e1f0}\label{class_r_b_tree_ae92465ed083a086b23d896fe3574e1f0}} 
+\index{RBTree@{RBTree}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{RBTree()}{RBTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily RBTree\+::\+RBTree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$}]{root\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor with root initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+} & Node to set as initial root \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+\mbox{\Hypertarget{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}\label{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}} 
+\index{RBTree@{RBTree}!````~RBTree@{$\sim$RBTree}}
+\index{````~RBTree@{$\sim$RBTree}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{$\sim$RBTree()}{~RBTree()}}
+{\footnotesize\ttfamily RBTree\+::$\sim$\+RBTree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor -\/ cleans up all nodes. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_b_tree_a3df5cba798764c4111eb4b77649e005e}\label{class_r_b_tree_a3df5cba798764c4111eb4b77649e005e}} 
+\index{RBTree@{RBTree}!GetRoot@{GetRoot}}
+\index{GetRoot@{GetRoot}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{GetRoot()}{GetRoot()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$ RBTree\+::\+Get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets root node. 
+
+\begin{DoxyReturn}{Returns}
+const RBTree\+Node$\ast$ Read-\/only root pointer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+\mbox{\Hypertarget{class_r_b_tree_a50b847741d9d7f4336255bfbde8d5d52}\label{class_r_b_tree_a50b847741d9d7f4336255bfbde8d5d52}} 
+\index{RBTree@{RBTree}!Insert@{Insert}}
+\index{Insert@{Insert}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily void RBTree\+::\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Public insert interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{class_flight}{Flight}} to insert \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+\mbox{\Hypertarget{class_r_b_tree_a62355b6e09276bd14418feff0d20cfa3}\label{class_r_b_tree_a62355b6e09276bd14418feff0d20cfa3}} 
+\index{RBTree@{RBTree}!Search@{Search}}
+\index{Search@{Search}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily int RBTree\+::\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}}}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Public search interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{class_flight}{Flight}} with search criteria \\
+\hline
+{\em result} & Vector for results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of matches 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00183}{183}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+\mbox{\Hypertarget{class_r_b_tree_a9a44f14311a9ee38c73d7441fd0d8667}\label{class_r_b_tree_a9a44f14311a9ee38c73d7441fd0d8667}} 
+\index{RBTree@{RBTree}!SetRoot@{SetRoot}}
+\index{SetRoot@{SetRoot}!RBTree@{RBTree}}
+\doxysubsubsection{\texorpdfstring{SetRoot()}{SetRoot()}}
+{\footnotesize\ttfamily void RBTree\+::\+Set\+Root (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$}]{root\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets new root node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+} & Pointer to new root \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{rbtree_8h}{rbtree.\+h}}\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{rbtree_8cpp}{rbtree.\+cpp}}\end{DoxyCompactItemize}

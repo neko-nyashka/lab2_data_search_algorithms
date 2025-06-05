@@ -1,0 +1,144 @@
+\hypertarget{class_hash_table}{}\doxysection{Hash\+Table Class Reference}
+\label{class_hash_table}\index{HashTable@{HashTable}}
+
+
+Hash table implementation with chaining.  
+
+
+
+
+{\ttfamily \#include $<$hash\+\_\+table.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hash_table_a7fa79053ce05d6d0c83e769fb0e32e61}{Hash\+Table}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hash_table_a585016f994c3c0f1b5b783e646d14f46}{Hash\+Table}} (int size\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor with size initialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hash_table_a5f9d7f9e9e46e525d13664cbeec3c7d2}{$\sim$\+Hash\+Table}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hash_table_af91e590b795159d201356d5a38c9a762}{insert}} (const \mbox{\hyperlink{class_flight}{Flight}} \&value)
+\begin{DoxyCompactList}\small\item\em Inserts flight into table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_hash_table_ac5d3664efa7670c312a716ecd657f4cd}{search}} (const std\+::string \&key, std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&result) const
+\begin{DoxyCompactList}\small\item\em Searches flights by airline name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_hash_table_a3555458a17f52a4b57dd0cd10778625f}{get\+\_\+collision\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Gets collision count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hash table implementation with chaining. 
+
+Definition at line \mbox{\hyperlink{hash__table_8h_source_l00011}{11}} of file \mbox{\hyperlink{hash__table_8h_source}{hash\+\_\+table.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hash_table_a7fa79053ce05d6d0c83e769fb0e32e61}\label{class_hash_table_a7fa79053ce05d6d0c83e769fb0e32e61}} 
+\index{HashTable@{HashTable}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!HashTable@{HashTable}}
+\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Hash\+Table\+::\+Hash\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_hash_table_a585016f994c3c0f1b5b783e646d14f46}\label{class_hash_table_a585016f994c3c0f1b5b783e646d14f46}} 
+\index{HashTable@{HashTable}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!HashTable@{HashTable}}
+\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Hash\+Table\+::\+Hash\+Table (\begin{DoxyParamCaption}\item[{int}]{size\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor with size initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+} & Number of buckets \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{hash__table_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{hash__table_8cpp_source}{hash\+\_\+table.\+cpp}}.
+
+\mbox{\Hypertarget{class_hash_table_a5f9d7f9e9e46e525d13664cbeec3c7d2}\label{class_hash_table_a5f9d7f9e9e46e525d13664cbeec3c7d2}} 
+\index{HashTable@{HashTable}!````~HashTable@{$\sim$HashTable}}
+\index{````~HashTable@{$\sim$HashTable}!HashTable@{HashTable}}
+\doxysubsubsection{\texorpdfstring{$\sim$HashTable()}{~HashTable()}}
+{\footnotesize\ttfamily Hash\+Table\+::$\sim$\+Hash\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hash_table_a3555458a17f52a4b57dd0cd10778625f}\label{class_hash_table_a3555458a17f52a4b57dd0cd10778625f}} 
+\index{HashTable@{HashTable}!get\_collision\_count@{get\_collision\_count}}
+\index{get\_collision\_count@{get\_collision\_count}!HashTable@{HashTable}}
+\doxysubsubsection{\texorpdfstring{get\_collision\_count()}{get\_collision\_count()}}
+{\footnotesize\ttfamily int Hash\+Table\+::get\+\_\+collision\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets collision count. 
+
+\begin{DoxyReturn}{Returns}
+Number of collisions 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hash__table_8cpp_source_l00002}{2}} of file \mbox{\hyperlink{hash__table_8cpp_source}{hash\+\_\+table.\+cpp}}.
+
+\mbox{\Hypertarget{class_hash_table_af91e590b795159d201356d5a38c9a762}\label{class_hash_table_af91e590b795159d201356d5a38c9a762}} 
+\index{HashTable@{HashTable}!insert@{insert}}
+\index{insert@{insert}!HashTable@{HashTable}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Hash\+Table\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_flight}{Flight}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Inserts flight into table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \mbox{\hyperlink{class_flight}{Flight}} to insert \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{hash__table_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{hash__table_8cpp_source}{hash\+\_\+table.\+cpp}}.
+
+\mbox{\Hypertarget{class_hash_table_ac5d3664efa7670c312a716ecd657f4cd}\label{class_hash_table_ac5d3664efa7670c312a716ecd657f4cd}} 
+\index{HashTable@{HashTable}!search@{search}}
+\index{search@{search}!HashTable@{HashTable}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily int Hash\+Table\+::search (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{result }\end{DoxyParamCaption}) const}
+
+
+
+Searches flights by airline name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Airline name to search \\
+\hline
+{\em result} & Vector for results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of matches 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hash__table_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{hash__table_8cpp_source}{hash\+\_\+table.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{hash__table_8h}{hash\+\_\+table.\+h}}\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{hash__table_8cpp}{hash\+\_\+table.\+cpp}}\end{DoxyCompactItemize}

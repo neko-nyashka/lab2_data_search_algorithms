@@ -1,0 +1,242 @@
+\begin{theindex}
+
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/bstree.cpp}, 
+		\hyperpage{25}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/bstree.h}, 
+		\hyperpage{26}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/flight.cpp}, 
+		\hyperpage{27, 28}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/flight.h}, 
+		\hyperpage{29}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/hash\_table.cpp}, 
+		\hyperpage{30}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/hash\_table.h}, 
+		\hyperpage{30, 31}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/rbtree.cpp}, 
+		\hyperpage{31}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/rbtree.h}, 
+		\hyperpage{34, 35}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/search.cpp}, 
+		\hyperpage{35}, \hyperpage{38}
+  \item {/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/search.h}, 
+		\hyperpage{41}, \hyperpage{44}
+  \item {$\sim$BSTree}
+    \subitem {BSTree}, \hyperpage{6}
+  \item {$\sim$Flight}
+    \subitem {Flight}, \hyperpage{10}
+  \item {$\sim$HashTable}
+    \subitem {HashTable}, \hyperpage{15}
+  \item {$\sim$RBTree}
+    \subitem {RBTree}, \hyperpage{17}
+
+  \indexspace
+
+  \item {binary\_insert}
+    \subitem {search.cpp}, \hyperpage{36}
+    \subitem {search.h}, \hyperpage{42}
+  \item {BLACK}
+    \subitem {rbtree.h}, \hyperpage{34}
+  \item {BSTree}, \hyperpage{5}
+    \subitem {$\sim$BSTree}, \hyperpage{6}
+    \subitem {BSTree}, \hyperpage{5, 6}
+    \subitem {GetRoot}, \hyperpage{6}
+    \subitem {Insert}, \hyperpage{6}
+    \subitem {Search}, \hyperpage{8}
+    \subitem {SetRoot}, \hyperpage{8}
+
+  \indexspace
+
+  \item {color}
+    \subitem {RBTreeNode}, \hyperpage{20}
+
+  \indexspace
+
+  \item {Flight}, \hyperpage{9}
+    \subitem {$\sim$Flight}, \hyperpage{10}
+    \subitem {Flight}, \hyperpage{9, 10}
+    \subitem {Get\_airline}, \hyperpage{10}
+    \subitem {Get\_arrival\_date}, \hyperpage{11}
+    \subitem {Get\_arrival\_time}, \hyperpage{11}
+    \subitem {Get\_flight\_number}, \hyperpage{11}
+    \subitem {Get\_passengers}, \hyperpage{11}
+    \subitem {operator$<$}, \hyperpage{11}
+    \subitem {operator$<$$<$}, \hyperpage{13}
+    \subitem {operator$<$=}, \hyperpage{11}
+    \subitem {operator$>$}, \hyperpage{12}
+    \subitem {operator$>$=}, \hyperpage{12}
+    \subitem {operator=}, \hyperpage{11}
+    \subitem {operator==}, \hyperpage{12}
+    \subitem {Set\_airline}, \hyperpage{12}
+    \subitem {Set\_arrival\_date}, \hyperpage{12}
+    \subitem {Set\_arrival\_time}, \hyperpage{13}
+    \subitem {Set\_flight\_number}, \hyperpage{13}
+    \subitem {Set\_passengers}, \hyperpage{13}
+  \item {flight.cpp}
+    \subitem {operator$<$$<$}, \hyperpage{27}
+  \item {flights}
+    \subitem {RBTreeNode}, \hyperpage{20}
+
+  \indexspace
+
+  \item {Get\_airline}
+    \subitem {Flight}, \hyperpage{10}
+  \item {Get\_arrival\_date}
+    \subitem {Flight}, \hyperpage{11}
+  \item {Get\_arrival\_time}
+    \subitem {Flight}, \hyperpage{11}
+  \item {get\_collision\_count}
+    \subitem {HashTable}, \hyperpage{15}
+  \item {Get\_flight\_number}
+    \subitem {Flight}, \hyperpage{11}
+  \item {Get\_passengers}
+    \subitem {Flight}, \hyperpage{11}
+  \item {GetRoot}
+    \subitem {BSTree}, \hyperpage{6}
+    \subitem {RBTree}, \hyperpage{17}
+
+  \indexspace
+
+  \item {hash\_table\_insert}
+    \subitem {search.cpp}, \hyperpage{36}
+    \subitem {search.h}, \hyperpage{42}
+  \item {HashTable}, \hyperpage{14}
+    \subitem {$\sim$HashTable}, \hyperpage{15}
+    \subitem {get\_collision\_count}, \hyperpage{15}
+    \subitem {HashTable}, \hyperpage{14, 15}
+    \subitem {insert}, \hyperpage{15}
+    \subitem {search}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Insert}
+    \subitem {BSTree}, \hyperpage{6}
+    \subitem {RBTree}, \hyperpage{18}
+  \item {insert}
+    \subitem {HashTable}, \hyperpage{15}
+
+  \indexspace
+
+  \item {KEY}
+    \subitem {search.h}, \hyperpage{41}
+  \item {key}
+    \subitem {RBTreeNode}, \hyperpage{20}
+    \subitem {TreeNode}, \hyperpage{22}
+
+  \indexspace
+
+  \item {left}
+    \subitem {RBTreeNode}, \hyperpage{21}
+    \subitem {TreeNode}, \hyperpage{23}
+  \item {linear\_search}
+    \subitem {search.cpp}, \hyperpage{37}
+    \subitem {search.h}, \hyperpage{43}
+
+  \indexspace
+
+  \item {main}
+    \subitem {search.cpp}, \hyperpage{37}
+  \item {multimap\_insert}
+    \subitem {search.cpp}, \hyperpage{37}
+    \subitem {search.h}, \hyperpage{43}
+
+  \indexspace
+
+  \item {operator$<$}
+    \subitem {Flight}, \hyperpage{11}
+  \item {operator$<$$<$}
+    \subitem {Flight}, \hyperpage{13}
+    \subitem {flight.cpp}, \hyperpage{27}
+  \item {operator$<$=}
+    \subitem {Flight}, \hyperpage{11}
+  \item {operator$>$}
+    \subitem {Flight}, \hyperpage{12}
+  \item {operator$>$=}
+    \subitem {Flight}, \hyperpage{12}
+  \item {operator=}
+    \subitem {Flight}, \hyperpage{11}
+  \item {operator==}
+    \subitem {Flight}, \hyperpage{12}
+
+  \indexspace
+
+  \item {parent}
+    \subitem {RBTreeNode}, \hyperpage{21}
+  \item {parseCSV}
+    \subitem {search.cpp}, \hyperpage{38}
+    \subitem {search.h}, \hyperpage{43}
+
+  \indexspace
+
+  \item {rb\_insert}
+    \subitem {search.cpp}, \hyperpage{38}
+    \subitem {search.h}, \hyperpage{44}
+  \item {RBTree}, \hyperpage{16}
+    \subitem {$\sim$RBTree}, \hyperpage{17}
+    \subitem {GetRoot}, \hyperpage{17}
+    \subitem {Insert}, \hyperpage{18}
+    \subitem {RBTree}, \hyperpage{17}
+    \subitem {Search}, \hyperpage{18}
+    \subitem {SetRoot}, \hyperpage{18}
+  \item {rbtree.h}
+    \subitem {BLACK}, \hyperpage{34}
+    \subitem {RED}, \hyperpage{34}
+  \item {RBTreeNode}, \hyperpage{19}
+    \subitem {color}, \hyperpage{20}
+    \subitem {flights}, \hyperpage{20}
+    \subitem {key}, \hyperpage{20}
+    \subitem {left}, \hyperpage{21}
+    \subitem {parent}, \hyperpage{21}
+    \subitem {RBTreeNode}, \hyperpage{20}
+    \subitem {right}, \hyperpage{21}
+  \item {RED}
+    \subitem {rbtree.h}, \hyperpage{34}
+  \item {right}
+    \subitem {RBTreeNode}, \hyperpage{21}
+    \subitem {TreeNode}, \hyperpage{23}
+
+  \indexspace
+
+  \item {Search}
+    \subitem {BSTree}, \hyperpage{8}
+    \subitem {RBTree}, \hyperpage{18}
+  \item {search}
+    \subitem {HashTable}, \hyperpage{16}
+  \item {search.cpp}
+    \subitem {binary\_insert}, \hyperpage{36}
+    \subitem {hash\_table\_insert}, \hyperpage{36}
+    \subitem {linear\_search}, \hyperpage{37}
+    \subitem {main}, \hyperpage{37}
+    \subitem {multimap\_insert}, \hyperpage{37}
+    \subitem {parseCSV}, \hyperpage{38}
+    \subitem {rb\_insert}, \hyperpage{38}
+  \item {search.h}
+    \subitem {binary\_insert}, \hyperpage{42}
+    \subitem {hash\_table\_insert}, \hyperpage{42}
+    \subitem {KEY}, \hyperpage{41}
+    \subitem {linear\_search}, \hyperpage{43}
+    \subitem {multimap\_insert}, \hyperpage{43}
+    \subitem {parseCSV}, \hyperpage{43}
+    \subitem {rb\_insert}, \hyperpage{44}
+  \item {Set\_airline}
+    \subitem {Flight}, \hyperpage{12}
+  \item {Set\_arrival\_date}
+    \subitem {Flight}, \hyperpage{12}
+  \item {Set\_arrival\_time}
+    \subitem {Flight}, \hyperpage{13}
+  \item {Set\_flight\_number}
+    \subitem {Flight}, \hyperpage{13}
+  \item {Set\_passengers}
+    \subitem {Flight}, \hyperpage{13}
+  \item {SetRoot}
+    \subitem {BSTree}, \hyperpage{8}
+    \subitem {RBTree}, \hyperpage{18}
+
+  \indexspace
+
+  \item {TreeNode}, \hyperpage{21}
+    \subitem {key}, \hyperpage{22}
+    \subitem {left}, \hyperpage{23}
+    \subitem {right}, \hyperpage{23}
+    \subitem {TreeNode}, \hyperpage{22}
+
+\end{theindex}

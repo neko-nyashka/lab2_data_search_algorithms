@@ -1,0 +1,89 @@
+\hypertarget{flight_8cpp_source}{}\doxysection{flight.\+cpp}
+\label{flight_8cpp_source}\index{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/flight.cpp@{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/flight.cpp}}
+\mbox{\hyperlink{flight_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flight_8h}{flight.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00004}\mbox{\hyperlink{class_flight_acbf1e8c321e01e04db2fe651a08b30af}{00004}} \mbox{\hyperlink{class_flight_acbf1e8c321e01e04db2fe651a08b30af}{Flight::Flight}}() \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00005}00005     flight\_number = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00006}00006     airline = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00007}00007     arrival\_date = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00008}00008     arrival\_time = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00009}00009     passengers = 0;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00013}\mbox{\hyperlink{class_flight_a791127724dec02b5c45848579d5f0e75}{00013}} \mbox{\hyperlink{class_flight_acbf1e8c321e01e04db2fe651a08b30af}{Flight::Flight}}(std::string flight\_number\_, std::string airline\_, std::string arrival\_date\_, std::string arrival\_time\_, \textcolor{keywordtype}{int} passengers\_) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00014}00014     flight\_number = flight\_number\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00015}00015     airline = airline\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00016}00016     arrival\_date = arrival\_date\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00017}00017     arrival\_time = arrival\_time\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00018}00018     passengers = passengers\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00021}\mbox{\hyperlink{class_flight_ac46206219b47832d21dedb4a1bda6954}{00021}} std::string \mbox{\hyperlink{class_flight_ac46206219b47832d21dedb4a1bda6954}{Flight::Get\_flight\_number}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00022}00022     \textcolor{keywordflow}{return} flight\_number;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00023}00023 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00024}\mbox{\hyperlink{class_flight_a7a6273bde84effd6c1cf793b0c7d0421}{00024}} std::string \mbox{\hyperlink{class_flight_a7a6273bde84effd6c1cf793b0c7d0421}{Flight::Get\_airline}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00025}00025     \textcolor{keywordflow}{return} airline;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00026}00026 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00027}\mbox{\hyperlink{class_flight_af6b981bc503360e6d4a8483ddd2808f6}{00027}} std::string \mbox{\hyperlink{class_flight_af6b981bc503360e6d4a8483ddd2808f6}{Flight::Get\_arrival\_date}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00028}00028     \textcolor{keywordflow}{return} arrival\_date;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00029}00029 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00031}\mbox{\hyperlink{class_flight_a25f76abbd4b2a8c19d4a4bd573973e25}{00031}} std::string \mbox{\hyperlink{class_flight_a25f76abbd4b2a8c19d4a4bd573973e25}{Flight::Get\_arrival\_time}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00032}00032     \textcolor{keywordflow}{return} arrival\_time;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00033}00033 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00035}\mbox{\hyperlink{class_flight_a7390760a09042a78618f9de6bb92d7f8}{00035}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_flight_a7390760a09042a78618f9de6bb92d7f8}{Flight::Get\_passengers}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00036}00036     \textcolor{keywordflow}{return} passengers;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00037}00037 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00039}\mbox{\hyperlink{class_flight_acefb07ef571b72eb6b01ade5c8184e7b}{00039}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_flight_acefb07ef571b72eb6b01ade5c8184e7b}{Flight::Set\_flight\_number}}(std::string flight\_number\_) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00040}00040     flight\_number = flight\_number\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00042}\mbox{\hyperlink{class_flight_a6ef8bec63c1d668eb1060211b1918939}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_flight_a6ef8bec63c1d668eb1060211b1918939}{Flight::Set\_airline}}(std::string airline\_) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00043}00043     airline = airline\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00045}\mbox{\hyperlink{class_flight_a2665a78752880335bd270d9ba093798c}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_flight_a2665a78752880335bd270d9ba093798c}{Flight::Set\_arrival\_date}}(std::string arrival\_date\_) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00046}00046     arrival\_date = arrival\_date\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00049}\mbox{\hyperlink{class_flight_a443415629fbd3569203919c8de292671}{00049}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_flight_a443415629fbd3569203919c8de292671}{Flight::Set\_arrival\_time}}(std::string arrival\_time\_) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00050}00050     arrival\_time = arrival\_time\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00051}00051 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00053}\mbox{\hyperlink{class_flight_ad868d4aa85f2bd78cf478a3d2acac342}{00053}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_flight_ad868d4aa85f2bd78cf478a3d2acac342}{Flight::Set\_passengers}}(\textcolor{keywordtype}{int} passengers\_) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00054}00054     passengers = passengers\_;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00055}00055 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00058}\mbox{\hyperlink{class_flight_ae1fe52045bba8a5155003ebd54e8bde8}{00058}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_flight_ae1fe52045bba8a5155003ebd54e8bde8}{Flight::operator>}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00059}00059     \textcolor{keywordflow}{return} airline > other.airline;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00060}00060 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00062}\mbox{\hyperlink{class_flight_a53ee52db272a0aadd29e1ea00524b6d3}{00062}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_flight_a53ee52db272a0aadd29e1ea00524b6d3}{Flight::operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00063}00063     \textcolor{keywordflow}{return}  airline >= other.airline;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00066}\mbox{\hyperlink{class_flight_ad82772815c363fe2d48e87d90b8fa49d}{00066}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_flight_ad82772815c363fe2d48e87d90b8fa49d}{Flight::operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00067}00067     \textcolor{keywordflow}{return} airline < other.airline;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00068}00068 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00070}\mbox{\hyperlink{class_flight_ad62cd73c763afda39d509138b4fd3910}{00070}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_flight_ad62cd73c763afda39d509138b4fd3910}{Flight::operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00071}00071     \textcolor{keywordflow}{return} airline <= other.airline;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00074}\mbox{\hyperlink{class_flight_ac6cecab19ab5e8d355012b8d6f4be1ae}{00074}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_flight_ac6cecab19ab5e8d355012b8d6f4be1ae}{Flight::operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00075}00075     \textcolor{keywordflow}{return} airline == other.airline;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00079}\mbox{\hyperlink{class_flight_ada57569f81bf4db9020ebb83a24f4b7a}{00079}} std::ostream\& \mbox{\hyperlink{flight_8cpp_ada57569f81bf4db9020ebb83a24f4b7a}{operator<<}}(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& flight) \{}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00080}00080     os << flight.flight\_number << \textcolor{stringliteral}{"{} "{}} << flight.airline << \textcolor{stringliteral}{"{} "{}} << flight.arrival\_date << \textcolor{stringliteral}{"{} "{}} << flight.arrival\_time << \textcolor{stringliteral}{"{} "{}} << flight.passengers;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00081}00081     \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00082}00082 \}}
+\DoxyCodeLine{\Hypertarget{flight_8cpp_source_l00083}00083 }
+
+\end{DoxyCode}

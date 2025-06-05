@@ -1,0 +1,48 @@
+\hypertarget{bstree_8h_source}{}\doxysection{bstree.\+h}
+\label{bstree_8h_source}\index{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/bstree.h@{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/bstree.h}}
+\mbox{\hyperlink{bstree_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef BSTREE\_H}}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00002}00002 \textcolor{preprocessor}{\#define BSTREE\_H}}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flight_8h}{flight.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00012}\mbox{\hyperlink{struct_tree_node}{00012}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_tree_node}{TreeNode}} \{}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00013}\mbox{\hyperlink{struct_tree_node_affaa58e8e5c36423b66b9cb7f1a948c8}{00013}}     \mbox{\hyperlink{class_flight}{Flight}} \mbox{\hyperlink{struct_tree_node_affaa58e8e5c36423b66b9cb7f1a948c8}{key}};          }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00014}\mbox{\hyperlink{struct_tree_node_a5335e7d975822e87088ec2afdefb1736}{00014}}     \mbox{\hyperlink{struct_tree_node}{TreeNode}}* \mbox{\hyperlink{struct_tree_node_a5335e7d975822e87088ec2afdefb1736}{left}};      }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00015}\mbox{\hyperlink{struct_tree_node_a71b4faa364404d671943562b352b1b74}{00015}}     \mbox{\hyperlink{struct_tree_node}{TreeNode}}* \mbox{\hyperlink{struct_tree_node_a71b4faa364404d671943562b352b1b74}{right}};     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00016}00016     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00021}00021     \mbox{\hyperlink{struct_tree_node}{TreeNode}}(\mbox{\hyperlink{class_flight}{Flight}} key\_);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00022}00022 \};}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00028}\mbox{\hyperlink{class_b_s_tree}{00028}} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_s_tree}{BSTree}} \{}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00029}00029 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00030}00030     \mbox{\hyperlink{struct_tree_node}{TreeNode}}* root; }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00037}00037     \textcolor{keywordtype}{void} Insert(\mbox{\hyperlink{struct_tree_node}{TreeNode}} *\& node, \mbox{\hyperlink{class_flight}{Flight}} key);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00038}00038     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00046}00046     \textcolor{keywordtype}{int} Search(\mbox{\hyperlink{struct_tree_node}{TreeNode}}* node, \mbox{\hyperlink{class_flight}{Flight}} key, std::vector<Flight>\& result);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00047}00047     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00052}00052     \textcolor{keywordtype}{void} DeleteTree(\mbox{\hyperlink{struct_tree_node}{TreeNode}} *\& node);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00053}00053         }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00054}00054 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00059}00059     \textcolor{keywordtype}{void} Insert(\mbox{\hyperlink{class_flight}{Flight}} key);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00060}00060     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00067}00067     \textcolor{keywordtype}{int} Search(\mbox{\hyperlink{class_flight}{Flight}} key, std::vector<Flight>\& result);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00072}00072     \mbox{\hyperlink{class_b_s_tree_a453f06c8a102516d7306d53c62b6b9bc}{BSTree}}();}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00073}00073     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00078}00078     \mbox{\hyperlink{class_b_s_tree_a453f06c8a102516d7306d53c62b6b9bc}{BSTree}}(\mbox{\hyperlink{struct_tree_node}{TreeNode}}* root\_);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00079}00079     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00083}00083     \mbox{\hyperlink{class_b_s_tree_a61dd6f59635ca4b40ab97c6a0f939bca}{\string~BSTree}}();}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00089}00089     \textcolor{keyword}{const} \mbox{\hyperlink{struct_tree_node}{TreeNode}}* \mbox{\hyperlink{class_b_s_tree_a321b29e7771c4a68fabdb3bd1b35f260}{GetRoot}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00090}00090     }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00095}00095     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_s_tree_adf90fb2417d64eba0d16cf1a65e04cd5}{SetRoot}}(\mbox{\hyperlink{struct_tree_node}{TreeNode}}* root\_);}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00096}00096 \};}
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{bstree_8h_source_l00098}00098 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

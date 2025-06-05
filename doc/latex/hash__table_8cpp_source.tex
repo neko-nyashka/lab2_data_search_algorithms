@@ -1,0 +1,56 @@
+\hypertarget{hash__table_8cpp_source}{}\doxysection{hash\+\_\+table.\+cpp}
+\label{hash__table_8cpp_source}\index{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/hash\_table.cpp@{/Users/anastasiatrufanova/Desktop/lab2\_data\_search\_algorithms/src/hash\_table.cpp}}
+\mbox{\hyperlink{hash__table_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{hash__table_8h}{hash\_table.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00002}\mbox{\hyperlink{class_hash_table_a3555458a17f52a4b57dd0cd10778625f}{00002}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hash_table_a3555458a17f52a4b57dd0cd10778625f}{HashTable::get\_collision\_count}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00003}00003     \textcolor{keywordflow}{return} collision\_count;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00004}00004 \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00005}\mbox{\hyperlink{class_hash_table_a585016f994c3c0f1b5b783e646d14f46}{00005}} \mbox{\hyperlink{class_hash_table_a7fa79053ce05d6d0c83e769fb0e32e61}{HashTable::HashTable}}(\textcolor{keywordtype}{int} size\_) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00006}00006     size = size\_;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00007}00007     table.resize(size\_);}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00008}00008 \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00010}00010 \textcolor{keywordtype}{int} HashTable::hash\_function(\textcolor{keyword}{const} std::string\& key)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00011}00011     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} h = 0;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00012}00012     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} P = 31;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00013}00013     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c : key) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00014}00014         h = h * P + c;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00015}00015     \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00016}00016     \textcolor{keywordflow}{return} h \% size;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00018}00018 \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00019}\mbox{\hyperlink{class_hash_table_af91e590b795159d201356d5a38c9a762}{00019}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hash_table_af91e590b795159d201356d5a38c9a762}{HashTable::insert}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& value) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00020}00020     std::string key = value.\mbox{\hyperlink{class_flight_a7a6273bde84effd6c1cf793b0c7d0421}{Get\_airline}}();}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00021}00021     \textcolor{keywordtype}{int} h = hash\_function(key);}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00022}00022     \textcolor{keywordtype}{bool} key\_exists = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00023}00023     \textcolor{keywordtype}{bool} other\_key\_exists = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00025}00025     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \mbox{\hyperlink{class_flight}{Flight}}\& flight : table[h]) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00026}00026         \textcolor{keywordflow}{if} (flight.Get\_airline() == key) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00027}00027             key\_exists = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00028}00028         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00029}00029             other\_key\_exists = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00030}00030         \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00034}00034     \textcolor{keywordflow}{if} (!key\_exists \&\& other\_key\_exists) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00035}00035         collision\_count++;}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00037}00037     table[h].push\_back(value);}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00041}\mbox{\hyperlink{class_hash_table_ac5d3664efa7670c312a716ecd657f4cd}{00041}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hash_table_ac5d3664efa7670c312a716ecd657f4cd}{HashTable::search}}(\textcolor{keyword}{const} std::string\& key, std::vector<Flight>\& result)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00042}00042     \textcolor{keywordtype}{int} h = hash\_function(key);}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00043}00043     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < (int) table[h].size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00044}00044         \textcolor{keywordflow}{if}(table[h][i].Get\_airline() == key) result.push\_back(table[h][i]);}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00046}00046     \textcolor{keywordflow}{return} result.size();}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00047}00047     }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00048}00048     }
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{hash__table_8cpp_source_l00050}00050 }
+
+\end{DoxyCode}

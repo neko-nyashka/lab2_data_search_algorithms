@@ -1,0 +1,153 @@
+\hypertarget{struct_r_b_tree_node}{}\doxysection{RBTree\+Node Struct Reference}
+\label{struct_r_b_tree_node}\index{RBTreeNode@{RBTreeNode}}
+
+
+Node structure for Red-\/\+Black Tree.  
+
+
+
+
+{\ttfamily \#include $<$rbtree.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_r_b_tree_node_a0cdf882582e4b5732fa27dfb7be71902}{RBTree\+Node}} (\mbox{\hyperlink{class_flight}{Flight}} key\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flight}{Flight}} \mbox{\hyperlink{struct_r_b_tree_node_abcfabfecba0282ef2123f260e671f390}{key}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_flight}{Flight}} data. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \mbox{\hyperlink{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}{flights}}
+\begin{DoxyCompactList}\small\item\em Vector for duplicate keys. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$ \mbox{\hyperlink{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}{left}}
+\begin{DoxyCompactList}\small\item\em Left child pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$ \mbox{\hyperlink{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}{right}}
+\begin{DoxyCompactList}\small\item\em Right child pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}} $\ast$ \mbox{\hyperlink{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}{parent}}
+\begin{DoxyCompactList}\small\item\em Parent pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}{color}}
+\begin{DoxyCompactList}\small\item\em Node color (RED or BLACK) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node structure for Red-\/\+Black Tree. 
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00012}{12}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_r_b_tree_node_a0cdf882582e4b5732fa27dfb7be71902}\label{struct_r_b_tree_node_a0cdf882582e4b5732fa27dfb7be71902}} 
+\index{RBTreeNode@{RBTreeNode}!RBTreeNode@{RBTreeNode}}
+\index{RBTreeNode@{RBTreeNode}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{RBTreeNode()}{RBTreeNode()}}
+{\footnotesize\ttfamily RBTree\+Node\+::\+RBTree\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}}}]{key\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+} & \mbox{\hyperlink{class_flight}{Flight}} object to initialize node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rbtree_8cpp_source_l00002}{2}} of file \mbox{\hyperlink{rbtree_8cpp_source}{rbtree.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}\label{struct_r_b_tree_node_abcfcfe097f3d447a00a477d9e22affe4}} 
+\index{RBTreeNode@{RBTreeNode}!color@{color}}
+\index{color@{color}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily int RBTree\+Node\+::color}
+
+
+
+Node color (RED or BLACK) 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00018}{18}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+\mbox{\Hypertarget{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}\label{struct_r_b_tree_node_a344209ef8ac2896eaa57acd4e8aca265}} 
+\index{RBTreeNode@{RBTreeNode}!flights@{flights}}
+\index{flights@{flights}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{flights}{flights}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_flight}{Flight}}$>$ RBTree\+Node\+::flights}
+
+
+
+Vector for duplicate keys. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00014}{14}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+\mbox{\Hypertarget{struct_r_b_tree_node_abcfabfecba0282ef2123f260e671f390}\label{struct_r_b_tree_node_abcfabfecba0282ef2123f260e671f390}} 
+\index{RBTreeNode@{RBTreeNode}!key@{key}}
+\index{key@{key}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_flight}{Flight}} RBTree\+Node\+::key}
+
+
+
+\mbox{\hyperlink{class_flight}{Flight}} data. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00013}{13}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+\mbox{\Hypertarget{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}\label{struct_r_b_tree_node_a7dadcb9c314c434fb8c826e0a874ad3b}} 
+\index{RBTreeNode@{RBTreeNode}!left@{left}}
+\index{left@{left}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}}$\ast$ RBTree\+Node\+::left}
+
+
+
+Left child pointer. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00015}{15}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+\mbox{\Hypertarget{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}\label{struct_r_b_tree_node_af945f85cbcc3baa7e00a52d87dd33e0f}} 
+\index{RBTreeNode@{RBTreeNode}!parent@{parent}}
+\index{parent@{parent}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}}$\ast$ RBTree\+Node\+::parent}
+
+
+
+Parent pointer. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00017}{17}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+\mbox{\Hypertarget{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}\label{struct_r_b_tree_node_abc28c5441aaf044e69201c8c6b803cdd}} 
+\index{RBTreeNode@{RBTreeNode}!right@{right}}
+\index{right@{right}!RBTreeNode@{RBTreeNode}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_r_b_tree_node}{RBTree\+Node}}$\ast$ RBTree\+Node\+::right}
+
+
+
+Right child pointer. 
+
+
+
+Definition at line \mbox{\hyperlink{rbtree_8h_source_l00016}{16}} of file \mbox{\hyperlink{rbtree_8h_source}{rbtree.\+h}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{rbtree_8h}{rbtree.\+h}}\item 
+/\+Users/anastasiatrufanova/\+Desktop/lab2\+\_\+data\+\_\+search\+\_\+algorithms/src/\mbox{\hyperlink{rbtree_8cpp}{rbtree.\+cpp}}\end{DoxyCompactItemize}
