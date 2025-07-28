@@ -4,13 +4,23 @@
 #include "flight.h"
 #include <vector>
 
+struct Item {
+    std::string key;
+    std::vector<Flight> *values;
+    Item *next;
+    Item();
+    Item(const std::string& key, const Flight& value);
+};
+
+
+
 /**
  * @class HashTable
  * @brief Hash table implementation with chaining
  */
 class HashTable {
 private:
-    std::vector<std::vector<Flight>> table; ///< Buckets with flight vectors
+    Item *items; ///< Buckets with flight vectors
     int size = 0;                           ///< Number of buckets
     int collision_count = 0;                ///< Collision counter
     
@@ -36,7 +46,7 @@ public:
     /**
      * @brief Default destructor
      */
-    ~HashTable() = default;
+    ~HashTable();
     
     /**
      * @brief Inserts flight into table
